@@ -1,0 +1,23 @@
+{
+  "name": "Grades-Bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gustavo Tramontin",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn bot/gui-grades.ts",
+    "start": "yarn build && pm2 start bot/gui-grades.js",
+    "testscrapper": "ts-node-dev webscrapper.ts"
+  },
+  "dependencies": {
+    "@gtramontin/discord-commands": "^1.0.9",
+    "discord.js": "^12.5.3",
+    "puppeteer": "^10.1.0",
+    "ts-node": "^10.2.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}
